@@ -152,13 +152,33 @@ Requires Web Crypto API support.
 
 ## Contributing
 
-Contributions are welcome. Please follow these guidelines:
+We welcome contributions from the community! Whether you're fixing bugs, adding features, or improving documentation, your help is appreciated.
+
+### Quick Start for Contributors
 
 1. Fork the repository
-2. Create a feature branch
-3. Commit changes with descriptive messages
-4. Submit a pull request with detailed description
-5. Ensure all tests pass and code is linted
+2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/secure-password-generator.git`
+3. Create a branch: `git checkout -b feature/your-feature-name`
+4. Make your changes
+5. Test your changes: `npm run build && npm run lint`
+6. Commit: `git commit -m "feat: add amazing feature"`
+7. Push: `git push origin feature/your-feature-name`
+8. Open a Pull Request
+
+### Areas for Contribution
+
+- **Features**: Password presets, history, export/import
+- **Security**: Additional entropy sources, advanced analysis
+- **UI/UX**: Animations, accessibility improvements
+- **Documentation**: Tutorials, examples, translations
+- **Testing**: Unit tests, integration tests, E2E tests
+- **Performance**: Optimization, caching strategies
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines and [EXAMPLES.md](EXAMPLES.md) for code examples.
+
+### Good First Issues
+
+Look for issues labeled `good first issue` or `help wanted` to get started.
 
 ## License
 
