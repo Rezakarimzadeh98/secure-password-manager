@@ -15,6 +15,10 @@ const initialConfig: PasswordConfig = {
   lowercase: true,
   numbers: true,
   symbols: true,
+  avoidAmbiguous: true,
+  requireAllTypes: true,
+  noConsecutiveRepeat: true,
+  noSequential: true,
 };
 
 export default function PasswordGenerator() {
@@ -194,6 +198,39 @@ export default function PasswordGenerator() {
                 <input
                   type="checkbox"
                   checked={config[key]}
+                  onChange={(e) => updateConfig(key, e.target.checked)}
+                  className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500 accent-blue-600"
+                />
+              </label>
+            ))}
+          </div>
+
+          {/* Advanced Rules */}
+          <div className="space-y-3 mt-8">
+            <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+              Advanced Rules
+            </h3>
+            {[ 
+              { key: 'avoidAmbiguous' as const, label: 'Avoid ambiguous characters', hint: 'Exclude I, l, 1, O, 0, o' },
+              { key: 'requireAllTypes' as const, label: 'Require all selected types', hint: 'Guarantee at least one of each selected set' },
+              { key: 'noConsecutiveRepeat' as const, label: 'No consecutive repeats', hint: 'Disallow aa, 00, @@ sequences' },
+              { key: 'noSequential' as const, label: 'No ascending/descending sequences', hint: 'Block abc, 123, cba, 321 patterns' },
+            ].map(({ key, label, hint }) => (
+              <label
+                key={key}
+                className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-900 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border border-gray-200 dark:border-gray-700"
+              >
+                <div className="flex flex-col">
+                  <span className="text-sm font-medium text-gray-900 dark:text-white">
+                    {label}
+                  </span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                    {hint}
+                  </span>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={Boolean(config[key])}
                   onChange={(e) => updateConfig(key, e.target.checked)}
                   className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500 accent-blue-600"
                 />
