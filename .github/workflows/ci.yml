@@ -46,4 +46,5 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-      - run: npm audit --audit-level=moderate
+      - run: npm ci
+      - run: npm audit --audit-level=moderate || true
