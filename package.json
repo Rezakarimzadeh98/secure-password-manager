@@ -1,0 +1,45 @@
+{
+  "name": "secure-password-generator",
+  "version": "1.0.0",
+  "description": "Enterprise-grade cryptographic password generation service implementing NIST SP 800-63B guidelines",
+  "author": "Your Name",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/secure-password-generator"
+  },
+  "keywords": [
+    "password-generator",
+    "cryptography",
+    "security",
+    "nextjs",
+    "typescript",
+    "web-crypto-api",
+    "csprng",
+    "entropy",
+    "password-strength"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "lucide-react": "^0.554.0",
+    "next": "16.0.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
