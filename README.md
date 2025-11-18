@@ -13,6 +13,7 @@ This application provides a client-side password generation tool utilizing the W
 ## Features
 
 ### Security
+
 - CSPRNG implementation via Web Crypto API
 - Shannon entropy calculation with real-time analysis
 - Zero server-side processing or storage
@@ -20,6 +21,7 @@ This application provides a client-side password generation tool utilizing the W
 - OWASP compliant password policies
 
 ### Architecture
+
 - Server-side rendering with Next.js App Router
 - Type-safe implementation with TypeScript strict mode
 - Optimized build pipeline using Turbopack
@@ -27,6 +29,7 @@ This application provides a client-side password generation tool utilizing the W
 - Utility-first styling with Tailwind CSS
 
 ### User Experience
+
 - Real-time password strength visualization
 - Adaptive UI with dark mode support
 - Responsive design for all viewport sizes
@@ -69,15 +72,17 @@ crypto.getRandomValues(array);
 ```
 
 This ensures:
+
 - True randomness suitable for cryptographic applications
 - Compliance with FIPS 140-2 standards
 - Sufficient entropy for password security
+
 
 ### Entropy Calculation
 
 Shannon entropy is computed using:
 
-```
+```text
 H = -Σ(p(x) * log2(p(x)))
 ```
 
@@ -94,7 +99,7 @@ Maximum entropy: log2(87^64) ≈ 413 bits
 
 ## Project Structure
 
-```
+```text
 secure-password-generator/
 ├── app/
 │   ├── page.tsx              # Main application page
@@ -110,12 +115,14 @@ secure-password-generator/
 ## Security Considerations
 
 ### Threat Model
+
 - No network requests during generation
 - No persistent storage mechanisms
 - No logging or analytics tracking
 - Client-side only execution model
 
 ### Best Practices
+
 - Minimum length: 12 characters recommended
 - Include multiple character types
 - Avoid dictionary words or patterns

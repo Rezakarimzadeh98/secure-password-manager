@@ -54,7 +54,7 @@ Before submitting a pull request:
 
 Follow conventional commit format:
 
-```
+```text
 type(scope): subject
 
 body
@@ -63,6 +63,7 @@ footer
 ```
 
 Types:
+
 - feat: New feature
 - fix: Bug fix
 - docs: Documentation changes
@@ -73,7 +74,8 @@ Types:
 - chore: Build process or auxiliary tool changes
 
 Example:
-```
+
+```text
 feat(crypto): implement advanced entropy calculation
 
 Add Shannon entropy calculation with character frequency analysis.
@@ -106,6 +108,7 @@ All submissions require review. Reviewers will check:
 ### Bug Reports
 
 Include:
+
 - Clear description of the issue
 - Steps to reproduce
 - Expected behavior
@@ -116,6 +119,7 @@ Include:
 ### Feature Requests
 
 Include:
+
 - Clear description of the feature
 - Use case explanation
 - Expected behavior
