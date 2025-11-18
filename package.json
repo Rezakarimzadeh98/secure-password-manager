@@ -2,12 +2,12 @@
   "name": "secure-password-generator",
   "version": "1.0.0",
   "description": "Enterprise-grade cryptographic password generation service implementing NIST SP 800-63B guidelines",
-  "author": "Your Name",
+  "author": "Reza Karimzadeh <r.karimzadeh1998@gmail.com>",
   "license": "MIT",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/secure-password-generator"
+    "url": "https://github.com/Rezakarimzadeh98/secure-password-generator"
   },
   "keywords": [
     "password-generator",

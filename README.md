@@ -36,9 +36,10 @@ This application provides a client-side password generation tool utilizing the W
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/secure-password-generator.git
+git clone https://github.com/Rezakarimzadeh98/secure-password-generator.git
 cd secure-password-generator
 npm install
+npm run dev
 ```
 
 ## Development
