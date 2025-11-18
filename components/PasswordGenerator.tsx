@@ -9,15 +9,17 @@ import {
   type PasswordConfig,
 } from '@/lib/crypto';
 
+const initialConfig: PasswordConfig = {
+  length: 16,
+  uppercase: true,
+  lowercase: true,
+  numbers: true,
+  symbols: true,
+};
+
 export default function PasswordGenerator() {
-  const [password, setPassword] = useState('');
-  const [config, setConfig] = useState<PasswordConfig>({
-    length: 16,
-    uppercase: true,
-    lowercase: true,
-    numbers: true,
-    symbols: true,
-  });
+  const [config, setConfig] = useState<PasswordConfig>(initialConfig);
+  const [password, setPassword] = useState(() => generateSecurePassword(initialConfig));
   const [copied, setCopied] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
@@ -30,11 +32,6 @@ export default function PasswordGenerator() {
     if (!password) return '';
     return estimateCrackingTime(strength.bits);
   }, [password, strength.bits]);
-
-  const generatePassword = useCallback(() => {
-    const newPassword = generateSecurePassword(config);
-    setPassword(newPassword);
-  }, [config]);
 
   const handleCopyToClipboard = async () => {
     if (!password) return;
@@ -52,9 +49,14 @@ export default function PasswordGenerator() {
     setConfig(prev => ({ ...prev, [key]: value }));
   };
 
+  const generatePassword = useCallback(() => {
+    const newPassword = generateSecurePassword(config);
+    setPassword(newPassword);
+  }, [config]);
+
   useEffect(() => {
-    generatePassword();
-  }, [generatePassword]);
+    setPassword(generateSecurePassword(config));
+  }, [config]);
 
   return (
     <div className="max-w-4xl mx-auto">
