@@ -15,6 +15,11 @@ export interface PasswordConfig {
   lowercase: boolean;
   numbers: boolean;
   symbols: boolean;
+  // Advanced options
+  avoidAmbiguous?: boolean;
+  requireAllTypes?: boolean;
+  noConsecutiveRepeat?: boolean;
+  noSequential?: boolean;
 }
 
 export interface EntropyResult {
@@ -31,38 +36,111 @@ const CHARACTER_SETS = {
   symbols: '!@#$%^&*()_+-=[]{}|;:,.<>?',
 } as const;
 
+const AMBIGUOUS_CHARS = new Set<string>(['I','l','1','O','0','o']);
+
+function filterAmbiguous(input: string): string {
+  let out = '';
+  for (const ch of input) {
+    if (!AMBIGUOUS_CHARS.has(ch)) out += ch;
+  }
+  return out;
+}
+
+function buildEnabledSets(config: PasswordConfig) {
+  const useAmbiguityFilter = !!config.avoidAmbiguous;
+  const sets: { key: keyof typeof CHARACTER_SETS; chars: string }[] = [];
+  if (config.uppercase) sets.push({ key: 'uppercase', chars: useAmbiguityFilter ? filterAmbiguous(CHARACTER_SETS.uppercase) : CHARACTER_SETS.uppercase });
+  if (config.lowercase) sets.push({ key: 'lowercase', chars: useAmbiguityFilter ? filterAmbiguous(CHARACTER_SETS.lowercase) : CHARACTER_SETS.lowercase });
+  if (config.numbers) sets.push({ key: 'numbers', chars: useAmbiguityFilter ? filterAmbiguous(CHARACTER_SETS.numbers) : CHARACTER_SETS.numbers });
+  if (config.symbols) sets.push({ key: 'symbols', chars: CHARACTER_SETS.symbols });
+  return sets.filter(s => s.chars.length > 0);
+}
+
+function secureRandomInt(maxExclusive: number): number {
+  if (maxExclusive <= 0) return 0;
+  const maxUint = 0xffffffff; // 2^32 - 1
+  const limit = Math.floor((maxUint + 1) / maxExclusive) * maxExclusive;
+  const buf = new Uint32Array(1);
+  while (true) {
+    crypto.getRandomValues(buf);
+    const val = buf[0];
+    if (val < limit) {
+      return val % maxExclusive;
+    }
+  }
+}
+
+function secureShuffle<T>(arr: T[]): T[] {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = secureRandomInt(i + 1);
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function isSequential(a: string, b: string, c: string): boolean {
+  const ca = a.charCodeAt(0);
+  const cb = b.charCodeAt(0);
+  const cc = c.charCodeAt(0);
+  const asc = cb === ca + 1 && cc === cb + 1;
+  const desc = cb === ca - 1 && cc === cb - 1;
+  return asc || desc;
+}
+
 /**
  * Generates a cryptographically secure password using Web Crypto API
  * @param config Password configuration options
  * @returns Generated password string
  */
 export function generateSecurePassword(config: PasswordConfig): string {
-  let charset = '';
-  
-  if (config.uppercase) charset += CHARACTER_SETS.uppercase;
-  if (config.lowercase) charset += CHARACTER_SETS.lowercase;
-  if (config.numbers) charset += CHARACTER_SETS.numbers;
-  if (config.symbols) charset += CHARACTER_SETS.symbols;
-  
-  // Fallback to lowercase if no charset selected
-  if (charset.length === 0) {
-    charset = CHARACTER_SETS.lowercase;
+  const sets = buildEnabledSets(config);
+  let combined = sets.map(s => s.chars).join('');
+
+  // Fallback if nothing selected (should be prevented by validation)
+  if (combined.length === 0) {
+    combined = CHARACTER_SETS.lowercase;
   }
-  
-  const charsetLength = charset.length;
-  const randomValues = new Uint32Array(config.length);
-  
-  // Use Web Crypto API for CSPRNG
-  crypto.getRandomValues(randomValues);
-  
-  // Build password using modulo bias mitigation
-  let password = '';
-  for (let i = 0; i < config.length; i++) {
-    const randomIndex = randomValues[i] % charsetLength;
-    password += charset[randomIndex];
+
+  const requireAll = !!config.requireAllTypes && sets.length > 0;
+  const noRepeat = !!config.noConsecutiveRepeat;
+  const noSeq = !!config.noSequential;
+
+  const result: string[] = [];
+
+  // Guarantee at least one character from each enabled set
+  if (requireAll) {
+    for (const s of sets) {
+      const idx = secureRandomInt(s.chars.length);
+      result.push(s.chars[idx]);
+    }
   }
-  
-  return password;
+
+  // Fill remaining characters honoring constraints
+  const targetLength = Math.max(0, config.length);
+  let safety = 0;
+  while (result.length < targetLength) {
+    const candidate = combined[secureRandomInt(combined.length)];
+
+    if (noRepeat && result.length > 0 && candidate === result[result.length - 1]) {
+      if (++safety > 5000) break; // prevent infinite loop
+      continue;
+    }
+
+    if (noSeq && result.length > 1) {
+      const a = result[result.length - 2];
+      const b = result[result.length - 1];
+      if (isSequential(a, b, candidate)) {
+        if (++safety > 5000) break;
+        continue;
+      }
+    }
+
+    result.push(candidate);
+  }
+
+  // Shuffle to avoid predictable placement of guaranteed chars
+  const shuffled = secureShuffle(result);
+  return shuffled.join('').slice(0, targetLength);
 }
 
 /**
