@@ -150,9 +150,14 @@ secure-password-manager/
 │   └── globals.css           # Global styles
 ├── components/
 │   └── PasswordGenerator.tsx # Core generator component
-├── lib/                      # Utility functions (if needed)
-├── public/                   # Static assets
-└── types/                    # TypeScript definitions
+├── lib/
+│   ├── constants.ts          # Application constants
+│   ├── crypto.ts             # Cryptographic utilities
+│   └── utils.ts              # Helper functions
+├── db.json                   # Local database file
+├── next.config.ts            # Next.js configuration
+├── tsconfig.json             # TypeScript configuration
+└── package.json              # Project dependencies
 ```
 
 ## Security Considerations
