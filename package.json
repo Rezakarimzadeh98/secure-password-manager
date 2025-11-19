@@ -1,7 +1,7 @@
 {
-  "name": "secure-password-generator",
+  "name": "secure-password-manager",
   "version": "1.0.0",
-  "description": "Enterprise-grade cryptographic password generation service implementing NIST SP 800-63B guidelines",
+  "description": "Enterprise-grade password manager with secure generation, vault storage, and authentication. Implements NIST SP 800-63B guidelines.",
   "author": "Reza Karimzadeh <r.karimzadeh1998@gmail.com>",
   "license": "MIT",
   "private": false,
