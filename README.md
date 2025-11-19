@@ -205,22 +205,26 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 
 ### Areas for Contribution
 
-- **Features**: Password presets, history, export/import
-- **Security**: Additional entropy sources, advanced analysis
-- **UI/UX**: Animations, accessibility improvements
-- **Documentation**: Tutorials, examples, translations
+- **Features**: Additional export formats, custom themes, password templates
+- **Security**: Enhanced encryption, two-factor authentication, biometric support
+- **UI/UX**: Animations, dark mode, accessibility improvements
+- **Documentation**: Tutorials, API documentation, video guides
 - **Testing**: Unit tests, integration tests, E2E tests
-- **Performance**: Optimization, caching strategies
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines and [EXAMPLES.md](EXAMPLES.md) for code examples.
+- **Performance**: Bundle optimization, lazy loading, caching strategies
 
 ### Good First Issues
 
-Look for issues labeled `good first issue` or `help wanted` to get started.
+Look for issues labeled `good first issue` or `help wanted` to get started. Feel free to open an issue for questions or suggestions.
 
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## 📧 Contact & Support
+
+- **Repository**: [GitHub](https://github.com/Rezakarimzadeh98/secure-password-generator)
+- **Issues**: [Report bugs or request features](https://github.com/Rezakarimzadeh98/secure-password-generator/issues)
+- **Author**: [Reza Karimzadeh](https://github.com/Rezakarimzadeh98)
 
 ## Acknowledgments
 
@@ -228,7 +232,11 @@ Built with modern web technologies and cryptographic standards. Implements recom
 
 ## References
 
-- [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html)
-- [OWASP Password Guidelines](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
-- [Web Crypto API Specification](https://www.w3.org/TR/WebCryptoAPI/)
-- [Shannon Entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory))
+- [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) - Digital Identity Guidelines
+- [OWASP Password Guidelines](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) - Authentication Best Practices
+- [Web Crypto API Specification](https://www.w3.org/TR/WebCryptoAPI/) - W3C Standard
+- [Shannon Entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) - Information Theory
+
+---
+
+**Made with ❤️ by [Reza Karimzadeh](https://github.com/Rezakarimzadeh98)**
