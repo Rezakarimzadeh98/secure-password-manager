@@ -32,6 +32,7 @@ This application provides a comprehensive password management solution with ente
 - **Quick Actions**: Copy, save, download with one click
 
 ### Password Vault
+
 - **Secure Local Storage**: All data encrypted and stored client-side
 - **Smart Organization**: Categories (Personal, Work, Finance, Social, Email)
 - **Advanced Search**: Filter by label, category, or notes
@@ -40,6 +41,7 @@ This application provides a comprehensive password management solution with ente
 - **Quick Statistics**: Total passwords, breakdown by strength level
 
 ### Password Bank (Premium Feature)
+
 - **Authentication Required**: Secure access with login system
 - **Comprehensive Details**: Title, username, URL, category, tags, notes
 - **Favorites System**: Star important passwords for quick access
@@ -48,12 +50,14 @@ This application provides a comprehensive password management solution with ente
 - **Bulk Operations**: Copy, delete, organize multiple passwords
 
 ### Bulk Password Generator
+
 - **Mass Creation**: Generate 1-1000 passwords simultaneously
 - **Instant Export**: Download in TXT, CSV, or JSON formats
 - **Individual Copy**: Quick copy for any generated password
 - **Uses Current Settings**: Applies your configured rules to all passwords
 
 ### Password Strength Analyzer
+
 - **Real-time Evaluation**: Analyze any password instantly
 - **Detailed Metrics**: Character count, entropy bits, security score (0-10)
 - **Visual Indicators**: Color-coded strength bars (Weak to Very Strong)
@@ -61,12 +65,14 @@ This application provides a comprehensive password management solution with ente
 - **Educational**: Learn what makes a password secure
 
 ### Settings & Preferences
+
 - **Auto-Generate Mode**: Automatic password creation with configurable intervals (1-60 seconds)
 - **Advanced Rules**: No consecutive repeats, no sequential patterns
 - **Full Customization**: Fine-tune all generation parameters
 - **System Information**: Version, features list, security notes
 
 ### Authentication System
+
 - **Local Authentication**: Secure email/password login stored locally
 - **Social Login Ready**: Google, GitHub, Microsoft OAuth UI (disabled in demo)
 - **User Profiles**: Personalized dashboard with user info
@@ -228,7 +234,8 @@ We actively welcome contributions from developers of all skill levels! Whether y
 
 ### Contribution Ideas
 
-#### Features
+#### Feature Enhancements
+
 - Dark mode theme
 - Password import/export from other managers (LastPass, 1Password, etc.)
 - Browser extension version
@@ -239,6 +246,7 @@ We actively welcome contributions from developers of all skill levels! Whether y
 - Custom password strength rules
 
 #### Security
+
 - End-to-end encryption for cloud sync
 - Biometric authentication support
 - Hardware key (YubiKey) integration
@@ -246,6 +254,7 @@ We actively welcome contributions from developers of all skill levels! Whether y
 - Rate limiting for brute force protection
 
 #### UI/UX
+
 - Smooth animations and transitions
 - Keyboard shortcuts
 - Accessibility (WCAG 2.1 compliance)
@@ -254,6 +263,7 @@ We actively welcome contributions from developers of all skill levels! Whether y
 - Tutorial/onboarding flow
 
 #### Developer Experience
+
 - Unit tests (Jest, React Testing Library)
 - E2E tests (Playwright, Cypress)
 - CI/CD pipeline improvements
@@ -264,6 +274,7 @@ We actively welcome contributions from developers of all skill levels! Whether y
 ### Good First Issues
 
 New to open source? Look for issues labeled:
+
 - `good first issue` - Perfect for beginners
 - `help wanted` - We need your expertise
 - `documentation` - Improve docs without touching code
