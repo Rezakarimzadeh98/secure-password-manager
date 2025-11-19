@@ -3,8 +3,8 @@
 > A professional, enterprise-level password manager with advanced generation algorithms, secure local storage, and comprehensive management tools. Built with modern web technologies and cryptographic standards.
 
 [![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge&logo=vercel)](https://passgen-manager.vercel.app/)
-[![GitHub Stars](https://img.shields.io/github/stars/Rezakarimzadeh98/secure-password-generator?style=for-the-badge&logo=github)](https://github.com/Rezakarimzadeh98/secure-password-generator/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/Rezakarimzadeh98/secure-password-generator?style=for-the-badge&logo=github)](https://github.com/Rezakarimzadeh98/secure-password-generator/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/Rezakarimzadeh98/secure-password-manager?style=for-the-badge&logo=github)](https://github.com/Rezakarimzadeh98/secure-password-manager/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/Rezakarimzadeh98/secure-password-manager?style=for-the-badge&logo=github)](https://github.com/Rezakarimzadeh98/secure-password-manager/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
@@ -76,8 +76,8 @@ This application provides a comprehensive password management solution with ente
 ## Installation
 
 ```bash
-git clone https://github.com/Rezakarimzadeh98/secure-password-generator.git
-cd secure-password-generator
+git clone https://github.com/Rezakarimzadeh98/secure-password-manager.git
+cd secure-password-manager
 npm install
 npm run dev
 ```
@@ -209,7 +209,7 @@ Requires Web Crypto API support.
 
 If you find this project useful, please consider giving it a star! It helps others discover the project.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Rezakarimzadeh98/secure-password-generator&type=Date)](https://star-history.com/#Rezakarimzadeh98/secure-password-generator&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Rezakarimzadeh98/secure-password-manager&type=Date)](https://star-history.com/#Rezakarimzadeh98/secure-password-manager&Date)
 
 ## Contributing
 
@@ -218,7 +218,7 @@ We actively welcome contributions from developers of all skill levels! Whether y
 ### How to Contribute
 
 1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/secure-password-generator.git`
+2. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/secure-password-manager.git`
 3. **Create** a branch: `git checkout -b feature/amazing-feature`
 4. **Make** your changes
 5. **Test** thoroughly: `npm run build && npm run lint`
@@ -281,7 +281,7 @@ Don't see an issue that interests you? Feel free to open a new one with your ide
 
 ### Recognition
 
-All contributors will be recognized in our [Contributors](https://github.com/Rezakarimzadeh98/secure-password-generator/graphs/contributors) page. Significant contributions may be highlighted in release notes!
+All contributors will be recognized in our [Contributors](https://github.com/Rezakarimzadeh98/secure-password-manager/graphs/contributors) page. Significant contributions may be highlighted in release notes!
 
 ## License
 
@@ -302,9 +302,9 @@ Every star motivates us to keep improving!
 ## Contact & Support
 
 - **Live Demo**: [passgen-manager.vercel.app](https://passgen-manager.vercel.app/)
-- **Repository**: [GitHub](https://github.com/Rezakarimzadeh98/secure-password-generator)
-- **Issues**: [Report bugs or request features](https://github.com/Rezakarimzadeh98/secure-password-generator/issues)
-- **Discussions**: [Join conversations](https://github.com/Rezakarimzadeh98/secure-password-generator/discussions)
+- **Repository**: [GitHub](https://github.com/Rezakarimzadeh98/secure-password-manager)
+- **Issues**: [Report bugs or request features](https://github.com/Rezakarimzadeh98/secure-password-manager/issues)
+- **Discussions**: [Join conversations](https://github.com/Rezakarimzadeh98/secure-password-manager/discussions)
 - **Author**: [Reza Karimzadeh](https://github.com/Rezakarimzadeh98)
 
 ## Acknowledgments
