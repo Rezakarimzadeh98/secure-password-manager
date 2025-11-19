@@ -24,7 +24,7 @@ interface SavedPassword {
   label: string;
   category: string;
   createdAt: Date;
-  strength: any;
+  strength: number;
   notes?: string;
 }
 
@@ -657,7 +657,7 @@ export default function PasswordGenerator() {
                   <label key={key} className="flex items-start gap-3 p-3 border border-black rounded-lg hover:bg-gray-50 cursor-pointer">
                     <input 
                       type="checkbox" 
-                      checked={Boolean((config as any)[key])} 
+                      checked={Boolean(config[key as keyof PasswordConfig])} 
                       onChange={(e) => updateConfig(key, e.target.checked)} 
                       className="w-5 h-5 accent-black cursor-pointer mt-0.5" 
                     />
@@ -1155,7 +1155,7 @@ export default function PasswordGenerator() {
                     <label key={key} className="flex items-start gap-3 p-4 border-2 border-black rounded-lg hover:bg-gray-50 cursor-pointer">
                       <input 
                         type="checkbox" 
-                        checked={Boolean((config as any)[key])} 
+                        checked={Boolean(config[key as keyof PasswordConfig])} 
                         onChange={(e) => updateConfig(key, e.target.checked)} 
                         className="w-5 h-5 accent-black cursor-pointer mt-0.5" 
                       />
