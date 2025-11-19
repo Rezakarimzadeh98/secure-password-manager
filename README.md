@@ -9,7 +9,7 @@ A professional, enterprise-level password manager built with Next.js 15, featuri
 
 ## Live Demo
 
-**[View Live Application](https://secure-password-generator-ochre.vercel.app/)**
+**[View Live Application](https://passgen-manager.vercel.app/)**
 
 ## Overview
 
