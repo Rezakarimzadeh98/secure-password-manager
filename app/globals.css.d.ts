@@ -1,1 +1,1 @@
-declare module './globals.css';
+declare module '*.css';
