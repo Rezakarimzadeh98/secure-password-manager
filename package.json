@@ -11,14 +11,21 @@
   },
   "keywords": [
     "password-generator",
-    "cryptography",
+    "password-manager",
+    "password-vault",
     "security",
+    "cryptography",
+    "web-crypto-api",
     "nextjs",
     "typescript",
-    "web-crypto-api",
-    "csprng",
-    "entropy",
-    "password-strength"
+    "tailwindcss",
+    "react",
+    "encryption",
+    "privacy",
+    "zero-knowledge",
+    "client-side",
+    "enterprise",
+    "authentication"
   ],
   "scripts": {
     "dev": "next dev",
