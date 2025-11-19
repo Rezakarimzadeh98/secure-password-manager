@@ -1,40 +1,71 @@
-# Secure Password Generator
+# Secure Password Manager - Enterprise Edition
 
-Enterprise-grade cryptographic password generation service implementing NIST SP 800-63B guidelines. Built with Next.js 15, TypeScript, and modern web standards.
+A professional, enterprise-level password manager built with Next.js 15, featuring advanced password generation, secure storage, and comprehensive management tools.
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.0-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Overview
+## 🚀 Live Demo
 
-This application provides a client-side password generation tool utilizing the Web Crypto API for cryptographically secure random number generation. The implementation focuses on security, performance, and user experience while maintaining a minimal dependency footprint.
+**[View Live Application](https://secure-password-generator-theta.vercel.app/)**
 
-## Features
+## 📋 Overview
 
-### Security
+This application provides a comprehensive password management solution with enterprise-level features, utilizing the Web Crypto API for cryptographically secure random generation. All data is stored locally in your browser for maximum security and privacy.
 
-- CSPRNG implementation via Web Crypto API
-- Shannon entropy calculation with real-time analysis
-- Zero server-side processing or storage
-- Memory-safe clipboard operations
-- OWASP compliant password policies
+## ✨ Features
 
-### Architecture
+### 🔐 Advanced Password Generator
+- **Length Range**: 8-128 characters with precise control
+- **Character Types**: Uppercase, lowercase, numbers, symbols
+- **Smart Security Rules**: Avoid ambiguous characters, require all types, no consecutive repeats, no sequential patterns
+- **Preset Templates**: Web, Banking, WiFi, Maximum security configurations
+- **Real-time Analysis**: Entropy calculation, strength scoring, visual indicators
+- **Quick Actions**: Copy, save, download with one click
 
-- Server-side rendering with Next.js App Router
-- Type-safe implementation with TypeScript strict mode
-- Optimized build pipeline using Turbopack
-- Component-based architecture with React 18
-- Utility-first styling with Tailwind CSS
+### 💾 Password Vault
+- **Secure Local Storage**: All data encrypted and stored client-side
+- **Smart Organization**: Categories (Personal, Work, Finance, Social, Email)
+- **Advanced Search**: Filter by label, category, or notes
+- **Rich Metadata**: Labels, creation date, strength indicators, custom notes
+- **Export Options**: Download vault in TXT, CSV, or JSON formats
+- **Quick Statistics**: Total passwords, breakdown by strength level
 
-### User Experience
+### 🏦 Password Bank (Premium Feature)
+- **Authentication Required**: Secure access with login system
+- **Comprehensive Details**: Title, username, URL, category, tags, notes
+- **Favorites System**: Star important passwords for quick access
+- **Advanced Filtering**: Search and filter by any field
+- **Last Modified Tracking**: Know when each password was updated
+- **Bulk Operations**: Copy, delete, organize multiple passwords
 
-- Real-time password strength visualization
-- Adaptive UI with dark mode support
-- Responsive design for all viewport sizes
-- Accessible interface (WCAG 2.1 Level AA)
-- Instant feedback and validation
+### ⚡ Bulk Password Generator
+- **Mass Creation**: Generate 1-1000 passwords simultaneously
+- **Instant Export**: Download in TXT, CSV, or JSON formats
+- **Individual Copy**: Quick copy for any generated password
+- **Uses Current Settings**: Applies your configured rules to all passwords
+
+### 📊 Password Strength Analyzer
+- **Real-time Evaluation**: Analyze any password instantly
+- **Detailed Metrics**: Character count, entropy bits, security score (0-10)
+- **Visual Indicators**: Color-coded strength bars (Weak to Very Strong)
+- **Expert Recommendations**: Best practices and security tips
+- **Educational**: Learn what makes a password secure
+
+### ⚙️ Settings & Preferences
+- **Auto-Generate Mode**: Automatic password creation with configurable intervals (1-60 seconds)
+- **Advanced Rules**: No consecutive repeats, no sequential patterns
+- **Full Customization**: Fine-tune all generation parameters
+- **System Information**: Version, features list, security notes
+
+### 🔒 Authentication System
+- **Local Authentication**: Secure email/password login stored locally
+- **Social Login Ready**: Google, GitHub, Microsoft OAuth UI (disabled in demo)
+- **User Profiles**: Personalized dashboard with user info
+- **Session Management**: Login/logout functionality
+- **Secure Storage**: Credentials hashed and stored in localStorage
 
 ## Installation
 
