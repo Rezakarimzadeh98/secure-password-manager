@@ -1,0 +1,10 @@
+{
+  "users": [],
+  "passwords": [],
+  "vault": [],
+  "bank": [],
+  "settings": {
+    "version": "2.0.0",
+    "lastBackup": null
+  }
+}
