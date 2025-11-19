@@ -143,7 +143,7 @@ Maximum entropy: log2(87^64) ≈ 413 bits
 ## Project Structure
 
 ```text
-secure-password-generator/
+secure-password-manager/
 ├── app/
 │   ├── page.tsx              # Main application page
 │   ├── layout.tsx            # Root layout component
