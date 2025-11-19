@@ -7,13 +7,18 @@ A professional, enterprise-level password manager built with Next.js 15, featuri
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 📋 Overview
+## Live Demo
+
+**[View Live Application](https://secure-password-generator-ochre.vercel.app/)**
+
+## Overview
 
 This application provides a comprehensive password management solution with enterprise-level features, utilizing the Web Crypto API for cryptographically secure random generation. All data is stored locally in your browser for maximum security and privacy.
 
-## ✨ Features
+## Features
 
-### 🔐 Advanced Password Generator
+### Advanced Password Generator
+
 - **Length Range**: 8-128 characters with precise control
 - **Character Types**: Uppercase, lowercase, numbers, symbols
 - **Smart Security Rules**: Avoid ambiguous characters, require all types, no consecutive repeats, no sequential patterns
@@ -21,7 +26,7 @@ This application provides a comprehensive password management solution with ente
 - **Real-time Analysis**: Entropy calculation, strength scoring, visual indicators
 - **Quick Actions**: Copy, save, download with one click
 
-### 💾 Password Vault
+### Password Vault
 - **Secure Local Storage**: All data encrypted and stored client-side
 - **Smart Organization**: Categories (Personal, Work, Finance, Social, Email)
 - **Advanced Search**: Filter by label, category, or notes
@@ -29,7 +34,7 @@ This application provides a comprehensive password management solution with ente
 - **Export Options**: Download vault in TXT, CSV, or JSON formats
 - **Quick Statistics**: Total passwords, breakdown by strength level
 
-### 🏦 Password Bank (Premium Feature)
+### Password Bank (Premium Feature)
 - **Authentication Required**: Secure access with login system
 - **Comprehensive Details**: Title, username, URL, category, tags, notes
 - **Favorites System**: Star important passwords for quick access
@@ -37,26 +42,26 @@ This application provides a comprehensive password management solution with ente
 - **Last Modified Tracking**: Know when each password was updated
 - **Bulk Operations**: Copy, delete, organize multiple passwords
 
-### ⚡ Bulk Password Generator
+### Bulk Password Generator
 - **Mass Creation**: Generate 1-1000 passwords simultaneously
 - **Instant Export**: Download in TXT, CSV, or JSON formats
 - **Individual Copy**: Quick copy for any generated password
 - **Uses Current Settings**: Applies your configured rules to all passwords
 
-### 📊 Password Strength Analyzer
+### Password Strength Analyzer
 - **Real-time Evaluation**: Analyze any password instantly
 - **Detailed Metrics**: Character count, entropy bits, security score (0-10)
 - **Visual Indicators**: Color-coded strength bars (Weak to Very Strong)
 - **Expert Recommendations**: Best practices and security tips
 - **Educational**: Learn what makes a password secure
 
-### ⚙️ Settings & Preferences
+### Settings & Preferences
 - **Auto-Generate Mode**: Automatic password creation with configurable intervals (1-60 seconds)
 - **Advanced Rules**: No consecutive repeats, no sequential patterns
 - **Full Customization**: Fine-tune all generation parameters
 - **System Information**: Version, features list, security notes
 
-### 🔒 Authentication System
+### Authentication System
 - **Local Authentication**: Secure email/password login stored locally
 - **Social Login Ready**: Google, GitHub, Microsoft OAuth UI (disabled in demo)
 - **User Profiles**: Personalized dashboard with user info
@@ -216,7 +221,7 @@ Look for issues labeled `good first issue` or `help wanted` to get started. Feel
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-## 📧 Contact & Support
+## Contact & Support
 
 - **Repository**: [GitHub](https://github.com/Rezakarimzadeh98/secure-password-generator)
 - **Issues**: [Report bugs or request features](https://github.com/Rezakarimzadeh98/secure-password-generator/issues)
@@ -235,4 +240,4 @@ Built with modern web technologies and cryptographic standards. Implements recom
 
 ---
 
-**Made with ❤️ by [Reza Karimzadeh](https://github.com/Rezakarimzadeh98)**
+**Made by [Reza Karimzadeh](https://github.com/Rezakarimzadeh98)**
