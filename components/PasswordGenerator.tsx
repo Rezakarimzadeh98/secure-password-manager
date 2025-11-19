@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Copy, RefreshCw, Check, Eye, EyeOff, Settings, X, Download, History, Save, Trash2, Lock, Zap, Shield, Clock, Key, BarChart3, AlertTriangle, Info, ChevronRight, Database, User, LogIn, Search, Tag, Globe, Heart } from 'lucide-react';
-import { generateSecurePassword, analyzePasswordStrength, type PasswordConfig } from '@/lib/crypto';
+import { generateSecurePassword, analyzePasswordStrength, type PasswordConfig, type EntropyResult } from '@/lib/crypto';
 import { PASSWORD_PRESETS } from '@/lib/constants';
 import { validateConfig } from '@/lib/utils';
 
@@ -24,7 +24,7 @@ interface SavedPassword {
   label: string;
   category: string;
   createdAt: Date;
-  strength: number;
+  strength: EntropyResult;
   notes?: string;
 }
 
