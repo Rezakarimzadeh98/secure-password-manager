@@ -2,14 +2,10 @@
 
 A professional, enterprise-level password manager built with Next.js 15, featuring advanced password generation, secure storage, and comprehensive management tools.
 
-[![Next.js](https://img.shields.io/badge/Next.js-15.0-black)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.0-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-## 🚀 Live Demo
-
-**[View Live Application](https://secure-password-generator-theta.vercel.app/)**
 
 ## 📋 Overview
 
