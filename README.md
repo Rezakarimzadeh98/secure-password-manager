@@ -6,6 +6,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/Rezakarimzadeh98/secure-password-manager?style=for-the-badge&logo=github)](https://github.com/Rezakarimzadeh98/secure-password-manager/stargazers)
 [![GitHub Issues](https://img.shields.io/github/issues/Rezakarimzadeh98/secure-password-manager?style=for-the-badge&logo=github)](https://github.com/Rezakarimzadeh98/secure-password-manager/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Repo Readiness](https://github.com/Rezakarimzadeh98/secure-password-manager/actions/workflows/repoaudit.yml/badge.svg)](https://github.com/Rezakarimzadeh98/secure-password-manager/actions/workflows/repoaudit.yml)
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)

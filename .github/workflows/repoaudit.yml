@@ -1,0 +1,21 @@
+name: repoaudit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  readiness:
+    name: repository readiness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Rezakarimzadeh98/repoaudit@v2
+        with:
+          path: .
+          strict: "false"
+          markdown: "true"
