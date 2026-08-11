@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Repo Readiness](https://github.com/Rezakarimzadeh98/secure-password-manager/actions/workflows/repoaudit.yml/badge.svg)](https://github.com/Rezakarimzadeh98/secure-password-manager/actions/workflows/repoaudit.yml)
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000?style=flat-square&logo=vercel)](https://passgen-manager.vercel.app/)
@@ -181,12 +181,12 @@ secure-password-manager/
 
 | Category | Technology |
 |----------|-----------|
-| Framework | Next.js 15 |
+| Framework | Next.js 16.3 |
 | Language | TypeScript 5.0 |
 | Styling | Tailwind CSS 4.0 |
 | Icons | Lucide React |
 | Build Tool | Turbopack |
-| Runtime | Node.js 18+ |
+| Runtime | Node.js 20+ |
 
 ## Browser Compatibility
 
@@ -237,6 +237,14 @@ We actively welcome contributions from developers of all skill levels! Whether y
 6. **Commit** with clear message: `git commit -m "feat: add amazing feature"`
 7. **Push** to your fork: `git push origin feature/amazing-feature`
 8. **Open** a Pull Request with detailed description
+
+Recommended local verification:
+
+```bash
+npm test
+npm run lint
+npm run build
+```
 
 ### Contribution Ideas
 
