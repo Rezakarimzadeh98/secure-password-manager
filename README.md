@@ -165,6 +165,9 @@ secure-password-manager/
 
 ### Threat Model
 
+
+See the full write-up in [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
+
 - No network requests during generation
 - No persistent storage mechanisms
 - No logging or analytics tracking
