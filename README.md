@@ -21,11 +21,13 @@
 
 This application provides a comprehensive password management solution with enterprise-level features, utilizing the Web Crypto API for cryptographically secure random generation. All data is stored locally in your browser for maximum security and privacy.
 
+Global growth and contributor roadmap: [docs/GO_GLOBAL.md](docs/GO_GLOBAL.md)
+
 ## Features
 
 ### Advanced Password Generator
 
-- **Length Range**: 8-128 characters with precise control
+- **Length Range**: 8-64 characters with precise control
 - **Character Types**: Uppercase, lowercase, numbers, symbols
 - **Smart Security Rules**: Avoid ambiguous characters, require all types, no consecutive repeats, no sequential patterns
 - **Preset Templates**: Web, Banking, WiFi, Maximum security configurations
@@ -34,7 +36,7 @@ This application provides a comprehensive password management solution with ente
 
 ### Password Vault
 
-- **Secure Local Storage**: All data encrypted and stored client-side
+- **Secure Local Storage**: Sensitive local data is encrypted after login
 - **Smart Organization**: Categories (Personal, Work, Finance, Social, Email)
 - **Advanced Search**: Filter by label, category, or notes
 - **Rich Metadata**: Labels, creation date, strength indicators, custom notes
@@ -74,7 +76,7 @@ This application provides a comprehensive password management solution with ente
 
 ### Authentication System
 
-- **Local Authentication**: Secure email/password login stored locally
+- **Local Authentication**: Email/password login with salted password hashing in browser storage
 - **Social Login Ready**: Google, GitHub, Microsoft OAuth UI (disabled in demo)
 - **User Profiles**: Personalized dashboard with user info
 - **Session Management**: Login/logout functionality
@@ -169,7 +171,7 @@ secure-password-manager/
 See the full write-up in [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
 
 - No network requests during generation
-- No persistent storage mechanisms
+- No server-side persistent storage
 - No logging or analytics tracking
 - Client-side only execution model
 
@@ -217,7 +219,7 @@ Requires Web Crypto API support.
 - **Cryptographically Secure**: Uses Web Crypto API (FIPS 140-2 compliant)
 - **Privacy First**: No tracking, no analytics, no data collection
 - **Modern Stack**: Built with Next.js 16, TypeScript 5, and Tailwind CSS 4
-- **Production Ready**: Fully functional with authentication, vault, and password bank
+- **Production Ready**: Fully functional client-side app with local auth and secure local storage
 - **Open Source**: Free forever, MIT licensed
 
 ### Star History
