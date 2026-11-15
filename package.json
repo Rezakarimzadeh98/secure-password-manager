@@ -50,5 +50,9 @@
     "tailwindcss": "^4",
     "tsx": "^4.23.13",
     "typescript": "^5"
+  },
+  "overrides": {
+    "minimatch": ">=11.0.1",
+    "zod": ">=4.1.12"
   }
 }
